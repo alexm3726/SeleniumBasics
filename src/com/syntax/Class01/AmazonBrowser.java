@@ -1,4 +1,4 @@
-package Selenium;
+package com.syntax.Class01;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
