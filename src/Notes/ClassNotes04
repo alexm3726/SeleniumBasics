@@ -1,0 +1,40 @@
+Class 4
+
+CSS Selectors( Cascading Styling Sheet)
+    It is another way of locating elements uniquely
+    Syntax:
+        tagname[Attribute='Attribute value']
+
+        example: input[id='user-message']
+
+        CSS does not give you an opportunity to identify an element by text
+
+        Shortcuts for CSS:
+            *Shortcut for className:"."-- classname //if space in class value it wont work
+                tagname.classNameValue
+                input.form-control
+            *Shortcut for ID: "#"--ID
+            tagname#IDValue //if space in id value it wont work
+            input#ctl00_MainContent_username
+
+            *contains() method in css:
+            * symbol represents contains() method= tagname[attribute *= 'partial attribute value']
+            input[id *= 'user']
+
+            *starts-with method in css:
+            ^ symbol represents starts-with method -- tagname[attribute ^= 'partial attribute value']
+            input[type ^= 'sub']
+
+            *ends-with method in css:
+            $ symbol represents ends-with method -- tagname[attribute $= 'partial attribute value']
+            input[id $= 'word']
+
+WebElement Commands:
+    consist of several methods where we can perform actions and get element state on the web page
+
+    isEnabled() -- boolean value
+    isSelected() -- boolean value
+    isDisplayed() -- boolean value
+    clear() -- void
+    getText() -- String value
+    getAttribute()-- String Value
