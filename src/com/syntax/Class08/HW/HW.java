@@ -1,6 +1,8 @@
 package com.syntax.Class08.HW;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class HW {
@@ -23,6 +25,8 @@ Build functions (methods) to open and close browsers
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
-        
+        WebElement checkBox= driver.findElement(By.xpath("//*[@label='blah']"));
+        checkBox.click();
+
     }
 }
