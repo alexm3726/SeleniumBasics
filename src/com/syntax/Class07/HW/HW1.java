@@ -26,37 +26,37 @@ public class HW1 {
         System.setProperty("webdriver.chrome.driver", "drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get(url);
+        driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
         WebElement tabButton= driver.findElement(By.id("tabButton"));
         WebElement newWindowButton= driver.findElement(By.id("windowButton"));
         WebElement windowMessageButton= driver.findElement(By.id("messageWindowButton"));
-        //tabButton.click();
+        tabButton.click();
         newWindowButton.click();
         //windowMessageButton.click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
 
 
         Set<String> allWindowHandles= driver.getWindowHandles();
         System.out.println(allWindowHandles.size());
         Iterator<String> iterator= allWindowHandles.iterator();
         String mainPageHandle=iterator.next();
+        String tabHandle= iterator.next();
         String newWindowHandle=iterator.next();
+        System.out.println(tabHandle);
+        driver.switchTo().window(tabHandle);
+        //Thread.sleep(2000);
+        WebElement textTab= driver.findElement(By.xpath("//h1[@id='sampleHeading']"));
+        System.out.println(textTab.getText()+" is the text \n"+driver.getTitle()+" is the title");
+        System.out.println(newWindowHandle);
         driver.switchTo().window(newWindowHandle);
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         WebElement textNewWindow= driver.findElement(By.xpath("//h1[@id='sampleHeading']"));
         System.out.println(textNewWindow.getText()+" is the text \n"+driver.getTitle()+" is the title");
+        System.out.println(mainPageHandle);
         driver.switchTo().window(mainPageHandle);
         windowMessageButton.click();
-        Thread.sleep(1000);
-        Set<String> threeWindowHandles= driver.getWindowHandles();
-        System.out.println(threeWindowHandles.size());
-        Iterator<String> iterator1=threeWindowHandles.iterator();
-        mainPageHandle=iterator1.next();
-        newWindowHandle=iterator1.next();
-        String windowMessageHandle=iterator1.next();
-        driver.switchTo().window(windowMessageHandle);
-        Thread.sleep(2000);
-        WebElement text1= driver.findElement(By.tagName("body"));
-        System.out.println(text1.getText());
+        //Thread.sleep(1000);
+
 
 
 
