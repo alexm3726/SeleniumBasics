@@ -1,4 +1,4 @@
-package com.syntax.Calss06.HW;
+package com.syntax.Class06.HW;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

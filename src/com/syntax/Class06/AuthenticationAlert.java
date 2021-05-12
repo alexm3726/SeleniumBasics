@@ -1,4 +1,4 @@
-package com.syntax.Calss06;
+package com.syntax.Class06;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
