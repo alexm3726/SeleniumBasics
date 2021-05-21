@@ -1,0 +1,33 @@
+Class 10
+
+How to handle Calendars:
+1.Click on the calendar
+2.Locate the month and get text
+3.if the desired text is not visible ---> we will keep clicking on next
+4. as soon as we have the desired month ---> then grab all the cells/ dates from  the table
+5. store them in a list and loop through them
+6. if condition to match cell value with condition ----> then click on the matched date and break loop
+
+
+Why do we need screenshots in testing?
+in testing it is very important to take screenshots in order to prove that our  test scenario
+covered certain functionality
+
+In selenium in order to take screenshots we will be using TakesScreenShots interface
+
+
+Actions Class
+    Actions Class is given by selenium to capture keyboard and mouse events such as:
+
+    Move to element
+    drag and drop
+    double click
+    right click
+
+HW
+Go to aa.com/homePage.do
+select depart date
+select return date
+select destination
+click on search
+quit the browser
